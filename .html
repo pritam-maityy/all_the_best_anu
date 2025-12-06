@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the Best Message for Mah Anu Betu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Simple, readable font */
+            background: linear-gradient(135deg, #ffe4e1, #ffb6c1); /* Soft pink gradient */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .hearts {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 24px;
+            animation: float 6s ease-in-out infinite;
+        }
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .heart:nth-child(3) { left: 40%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 60%; animation-delay: 3s; }
+        .heart:nth-child(5) { left: 80%; animation-delay: 4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        button {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-family: Arial, sans-serif; /* Matching simple font */
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        #mainMessage {
+            display: none;
+            animation: fadeIn 1s ease-in;
+        }
+        #quiz {
+            display: none;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .quiz-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .quiz-buttons button {
+            margin: 10px;
+            min-width: 200px;
+        }
+        #response {
+            font-weight: bold;
+            color: #ff1493;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts">
+            <div class="heart">❤️</div>
+            <div class="heart">💖</div>
+            <div class="heart">💕</div>
+            <div class="heart">💗</div>
+            <div class="heart">💓</div>
+        </div>
+        <h1>All the Best for Your Exam, Mah Anu Betu! 💖</h1>
+        <p id="mainMessage">
+            I know tum bohot strong ho, tumne bohot mehnat kri hai and i am really proud of you. You are more than enough! Aaj tumhara exam hai toh bina kisi stress ke bina kisi tension ke dena—bs itna soch na ki yeh sb exam hojaye, phir hum dono saath mai rahege. I love you Mah Anu Betu and i always will love you no matter the place, time, anything. 💪❤️
+        </p>
+        <button onclick="revealMessage()">Click to Reveal the Message</button>
+        
+        <div id="quiz">
+            <h2>Quick Interactive Quiz to Boost Your Mood!</h2>
+            <p>What's your go-to stress-buster?</p>
+            <div class="quiz-buttons">
+                <button onclick="respond('A')">A) A deep breath and a smile 😊</button>
+                <button onclick="respond('B')">B) Listening to our favorite song 🎶</button>
+                <button onclick="respond('C')">C) Imagining our next adventure together 🌟</button>
+            </div>
+            <p id="response"></p>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('mainMessage').style.display = 'block';
+            document.getElementById('quiz').style.display = 'block';
+        }
+
+        function respond(choice) {
+            let responseText = "";
+            if (choice === 'A') {
+                responseText = "Great choice! Take a deep breath—you've got this! 😊 Sending virtual hugs!";
+            } else if (choice === 'B') {
+                responseText = "Music to the ears! Play it loud and ace that exam! 🎶 Can't wait to dance with you!";
+            } else if (choice === 'C') {
+                responseText = "Adventures await! Focus on that after the exam—love you endlessly! 🌟";
+            }
+            document.getElementById('response').innerText = responseText;
+        }
+    </script>
+</body>
+</html>
